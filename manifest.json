@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Bookmark",
-  "description": "Bookmark App",
-  "version": "1.0",
+  "name": "Class A",
+  "description": "Class A testing for chrome. Now with 100% less Google Translate!",
+  "version": "2.0",
   "content_scripts":[
 		{
 			"matches": ["http://assessment.resa.net/*"],

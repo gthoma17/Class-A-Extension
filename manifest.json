@@ -1,23 +1,21 @@
 {
-  "manifest_version": 2,
-
-  "name": "Class A",
-  "description": "Class A testing for chrome. Now with 100% less Google Translate!",
-  "version": "2.0",
-  "content_scripts":[
-		{
-			"matches": ["http://assessment.resa.net/*"],
-			"js": ["content_script.js"],
-			"run_at": "document_end"
-		}
-	],
+  "name": "MS/HS Parent Survey",
+  "description": "Parent Feedback Survey for LPPS",
+  "version": "0.1",
+  "app": {
+    "urls": [
+      "*://surveymonkey.com/s/XTNCDPW",
+      "*://www.surveymonkey.com/s/XTNCDPW"
+    ],
+    "launch": {
+      "web_url": "http://www.surveymonkey.com/s/XTNCDPW"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
   "permissions": [
-    "tabs", 
-    "http://*/*", 
-    "https://*/*"
-  ],
-  "browser_action": {
-    "default_icon": "128.png",
-    "default_popup": "popup.html"
-  }
+    "unlimitedStorage",
+    "notifications"
+  ]
 }

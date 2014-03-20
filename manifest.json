@@ -1,23 +1,22 @@
 {
-  "manifest_version": 2,
+"update_url": "https://clients2.google.com/service/update2/crx",
 
-  "name": "Class A",
-  "description": "Class A testing for chrome. Now with 100% less Google Translate!",
-  "version": "2.0",
-  "content_scripts":[
-		{
-			"matches": ["http://assessment.resa.net/*"],
-			"js": ["content_script.js"],
-			"run_at": "document_end"
-		}
-	],
+
+  "name": "Class A Kiosk",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "128": "icon_128.png",
+    "16": "icon_16.png"
+  },
+  "app": {
+    "background": {
+      "scripts": [ "background.js" ],
+      "persistent": false
+    }
+  },
   "permissions": [
-    "tabs", 
-    "http://*/*", 
-    "https://*/*"
+    "webview"
   ],
-  "browser_action": {
-    "default_icon": "128.png",
-    "default_popup": "popup.html"
-  }
+  "kiosk_enabled": true
 }
